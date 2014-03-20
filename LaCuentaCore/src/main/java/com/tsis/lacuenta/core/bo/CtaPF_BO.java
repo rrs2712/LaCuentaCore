@@ -15,7 +15,6 @@ public class CtaPF_BO extends CtaBase_BO implements CtaBO_IF {
 
 	public CtaPF_BO(Cta_DTO cuenta) {
 		super(cuenta);
-		System.out.println("Cuenta con monto de propina fijo");
 	}
 
 	/* (non-Javadoc)

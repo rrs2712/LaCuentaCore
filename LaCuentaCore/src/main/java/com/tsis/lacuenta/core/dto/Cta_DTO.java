@@ -15,7 +15,6 @@ public class Cta_DTO implements Serializable {
 	private double montoCta;
 	private int personas;
 	private double propina;
-	private boolean redondear;
 	
 	/**
 	 * 
@@ -32,13 +31,11 @@ public class Cta_DTO implements Serializable {
 	 * @param propina
 	 * @param redondear
 	 */
-	public Cta_DTO(double montoCta, int personas, double propina,
-			boolean redondear) {
+	public Cta_DTO(double montoCta, int personas, double propina) {
 		super();
 		this.montoCta = montoCta;
 		this.personas = personas;
 		this.propina = propina;
-		this.redondear = redondear;
 	}
 
 
@@ -97,30 +94,11 @@ public class Cta_DTO implements Serializable {
 
 
 
-	/**
-	 * @return the redondear
-	 */
-	public boolean isRedondear() {
-		return redondear;
-	}
-
-
-
-	/**
-	 * @param redondear the redondear to set
-	 */
-	public void setRedondear(boolean redondear) {
-		this.redondear = redondear;
-	}
-
-
-
 	public void printValues(){
 		
 		System.out.println("Monto =" + this.montoCta);
 		System.out.println("People=" + this.personas);
 		System.out.println("tip   =" + this.propina);
-		System.out.println("round =" + this.redondear);
 	}
 
 }

@@ -20,7 +20,6 @@ public class CtaPP_BO extends CtaBase_BO implements CtaBO_IF {
 	 */
 	public CtaPP_BO(Cta_DTO cuenta) {
 		super(cuenta);
-		System.out.println("Cuenta de tipo propina proporcional");
 	}
 
 	/* (non-Javadoc)
