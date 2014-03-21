@@ -3,21 +3,18 @@
  */
 package com.tsis.lacuenta.core.main;
 
-import junit.framework.TestCase;
-
 import com.tsis.lacuenta.core.dto.Cta_DTO;
 import com.tsis.lacuenta.core.dto.FakeBills;
 
+import junit.framework.TestCase;
+
 /**
  * @author asus
+ * 
+ * Test para probar la generacion de resultados cuando los datos de entrada no son correctos
  *
- * Test para probar la siguiente clase, contructor y metodos:
- *  
- * com.tsis.lacuenta.core.main.Cuenta
- * Cuenta(double monto, int pesonas, double propina, int tipoCta)
- * getCtaIndividual(boolean redondear)
  */
-public class Cuenta1Test extends TestCase {
+public class Cuenta2Test extends TestCase {
 	
 	private Cuenta cuentaPF;
 	private Cuenta cuentaPP;
@@ -26,7 +23,7 @@ public class Cuenta1Test extends TestCase {
 	/**
 	 * @param name
 	 */
-	public Cuenta1Test(String name) {
+	public Cuenta2Test(String name) {
 		super(name);
 	}
 
@@ -38,10 +35,10 @@ public class Cuenta1Test extends TestCase {
 		
 		// Obtenemos un set de datos de prueba
 		FakeBills bills = new FakeBills();
-		Cta_DTO dto = bills.getCta_DefaultVals();
+		Cta_DTO dto = bills.getCta_WrongVals();
 		// Creamos dos instancias de cuenta para probar: cuenta de propina proporcinonal y monto fijo de propina
-		this.cuentaPP = new Cuenta(dto.getMontoCta(), dto.getPersonas(), dto.getPropina(), 1);
-		this.cuentaPF = new Cuenta(dto.getMontoCta(), dto.getPersonas(), dto.getPropina(), 2);
+		this.cuentaPP = new Cuenta(dto.getMontoCta(), dto.getPersonas(), dto.getPropina(), -1);
+		this.cuentaPF = new Cuenta(dto.getMontoCta(), dto.getPersonas(), dto.getPropina(), -1);
 	}
 
 	/**
@@ -63,7 +60,7 @@ public class Cuenta1Test extends TestCase {
 	public final void testGetCtaIndividual1() {
 		String metodo = "getCtaIndividual(false)\n";
 		
-		double expected = 110.28;
+		double expected = 0;
 		double actual = cuentaPF.getCtaIndividual(false);
 		String msg = clase + metodo + "Esperado=" + expected + "\nActual=" + actual;
 		
@@ -78,7 +75,7 @@ public class Cuenta1Test extends TestCase {
 	public final void testGetCtaIndividual2() {
 		String metodo = "getCtaIndividual(true)\n";
 		
-		double expected = 111;
+		double expected = 0;
 		double actual = cuentaPF.getCtaIndividual(true);
 		String msg = clase + metodo + "Esperado=" + expected + "\nActual=" + actual;
 		
@@ -95,7 +92,7 @@ public class Cuenta1Test extends TestCase {
 	public final void testGetCtaIndividual3() {
 		String metodo = "getCtaIndividual(false)\n";
 		
-		double expected = 120.33;
+		double expected = 0;
 		double actual = cuentaPP.getCtaIndividual(false);
 		String msg = clase + metodo + "Esperado=" + expected + "\nActual=" + actual;
 		
@@ -110,7 +107,7 @@ public class Cuenta1Test extends TestCase {
 	public final void testGetCtaIndividual4() {
 		String metodo = "getCtaIndividual(true)\n";
 		
-		double expected = 121;
+		double expected = 0;
 		double actual = cuentaPP.getCtaIndividual(true);
 		String msg = clase + metodo + "Esperado=" + expected + "\nActual=" + actual;
 		

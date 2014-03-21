@@ -20,5 +20,9 @@ public class FakeBills {
 	public Cta_DTO getCta_DefaultVals(){
 		return new Cta_DTO(200.55, 2, 20);
 	}
+	
+	public Cta_DTO getCta_WrongVals(){
+		return new Cta_DTO(-1.1, -1, -1.1);
+	}
 
 }
