@@ -4,7 +4,7 @@
 	
 	<groupId>com.tsis.lacuenta.core.main</groupId>
 	<artifactId>LaCuentaCore</artifactId>	
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	<packaging>jar</packaging>
 	
 	<name>LaCuentaCore</name>
@@ -19,7 +19,7 @@
 			<name>Raúl Regalado Sánchez</name>
 			<email>raul.regalado@tsis.mx</email>
 			<roles>
-				<role>Developer</role>
+				<role>Sr. Java Developer</role>
 			</roles>
 			<organization>TSIS - Transition Solutions &amp; Innovation Services</organization>
 			<timezone>-6</timezone>

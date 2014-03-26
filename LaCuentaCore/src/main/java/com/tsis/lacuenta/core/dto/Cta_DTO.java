@@ -100,5 +100,13 @@ public class Cta_DTO implements Serializable {
 		System.out.println("People=" + this.personas);
 		System.out.println("tip   =" + this.propina);
 	}
+	
+	public String showValues(){
+		
+		String cadena = "\nMonto =" + this.montoCta +
+						"\nPeople=" + this.personas +
+						"\ntip   =" + this.propina;
+		return cadena;
+	}
 
 }
